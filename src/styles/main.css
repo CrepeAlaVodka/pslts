@@ -1,0 +1,31 @@
+@import './components/navbar.css';
+
+:root {
+  --bg-1: #242424;
+
+  --border-c-1: #626262;
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  
+  color-scheme: light dark;
+  background-color: var(--bg-1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#content {
+  flex: 1;
+  padding: 1em;
+}
+
+

@@ -1,17 +1,23 @@
-import React from 'react';
+import React from "react";
 
 const Navbar = () => {
   return (
-    <aside className="navbar">
-      <div>
-        <h1>Navbar</h1>
-        Icon "burger"
+    <aside id="navbar">
+      <div className="navbar-header">
+        <div className="navbar-title">
+          <span>TITLE</span>
+        </div>
+        <div className="navbar-icon">ICON</div>
       </div>
-      <div>
-        <nav>
+      <div className="navbar-content">
+        <nav className="navbar-nav">
           <ul>
-            <li>Accueil</li>
-            <li>À propos</li>
+            <li>
+              <a href="#">
+                <span className="icon">ICON</span>
+                <span className="label">Home</span>
+              </a>
+            </li>
           </ul>
         </nav>
 
