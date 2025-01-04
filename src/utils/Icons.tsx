@@ -9,7 +9,6 @@ const returnError = () => {
 const customFa6Icons = (name: string) => {
   const Fa6Icon = (Fa6Icons as { [key: string]: React.ComponentType })[name];
   if (!Fa6Icon) {
-    console.log("L'icône suivant n'a pas été trouvé :", name);
     return returnError();
   };
 
@@ -19,7 +18,6 @@ const customFa6Icons = (name: string) => {
 const customBsIcons = (name: string) => {
   const BsIcon = (BsIcons as { [key: string]: React.ComponentType })[name];
   if (!BsIcon) {
-    console.log("L'icône suivant n'a pas été trouvé :", name);
     return returnError();
   };
 

@@ -17,38 +17,42 @@ const Navbar = () => {
     })
   }
 
-  useEffect(() => {
-    console.log(pages);
-  }, [pages]);
+  const handleToggleNavbar = () => {
+    const navbar = document.getElementById("navbar");
+    navbar?.classList.toggle("active");
+  }
   
   return (
-    <aside id="navbar">
+    <aside id="navbar" className="">
       <div className="navbar-header">
         <div className="navbar-title">
           <span>TITLE</span>
         </div>
-        <div className="navbar-icon">ICON</div>
+        <div className="navbar-icon" onClick={() => handleToggleNavbar()}>
+          {customFa6Icons("FaAlignJustify")}
+        </div>
       </div>
       <div className="navbar-content">
         <nav className="navbar-nav">
           <ul>
-            {/* <li>
-              <a href="#">
-                <span className="icon">ICON</span>
-                <span className="label">Home</span>
-              </a>
-            </li> */}
-
             {handleListPages()}
           </ul>
         </nav>
 
-        <div>
-          <h2>Profile</h2>
+        <div className="navbar-footer">
           <ul>
-            <li>Profile</li>
-            <li>Settings</li>
-            <li>Logout</li>
+            <li>
+              <span className="icon">{customFa6Icons("FaCircleUser")}</span>
+              <span className="label">Profile</span>
+            </li>
+            <li>
+              <span className="icon">{customFa6Icons("FaGear")}</span>
+              <span className="label">Paramètres</span>
+            </li>
+            <li>
+              <span className="icon">{customFa6Icons("FaArrowRightFromBracket")}</span>
+              <span className="label">Déconnexion</span>
+            </li>
           </ul>
         </div>
       </div>
