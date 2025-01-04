@@ -1,0 +1,12 @@
+[
+  {
+    "label": "Accueil",
+    "url": "/",
+    "icon": "FaHouse"
+  },
+  {
+    "label": "A propos",
+    "url": "/about",
+    "icon": "FaBookmark"
+  }
+]

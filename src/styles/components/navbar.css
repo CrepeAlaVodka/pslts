@@ -37,19 +37,6 @@
 
 } 
 
-.navbar-nav ul li {
-  border-bottom: 1px solid white;
-
-  &:first-child {
-    border-top: 1px solid white;
-  }
-
-  &:hover {
-    background-color: #333;
-  }
-
-}
-
 .navbar-nav ul li a {
   display: flex;
   align-items: center;
@@ -62,6 +49,7 @@
     width: 60px;
     display: flex;
     justify-content: center;
+    font-size: 24px;
   }
   & .label {
     flex: 1;
@@ -69,6 +57,12 @@
     font-size: 20px;
     line-height: 10px;
   }
+}
+
+.navbar-nav ul li:hover a {
+  background-color: #2d4457;
+  color: #2196f3;
+
 }
 
 

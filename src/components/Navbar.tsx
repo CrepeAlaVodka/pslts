@@ -1,6 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
+import pages from "@/config/pages.json";
+import { customFa6Icons } from '@/utils/Icons'; // Import customFa6Icons from Icons.tsx
 
 const Navbar = () => {
+
+  const handleListPages = () => {
+    return pages.map((page) => {
+      return (
+        <li key={page.label}>
+          <a href={page.url}>
+            <span className="icon">{customFa6Icons(page.icon)}</span>
+            <span className="label">{page.label}</span>
+          </a>
+        </li>
+      )
+    })
+  }
+
+  useEffect(() => {
+    console.log(pages);
+  }, [pages]);
+  
   return (
     <aside id="navbar">
       <div className="navbar-header">
@@ -12,12 +32,14 @@ const Navbar = () => {
       <div className="navbar-content">
         <nav className="navbar-nav">
           <ul>
-            <li>
+            {/* <li>
               <a href="#">
                 <span className="icon">ICON</span>
                 <span className="label">Home</span>
               </a>
-            </li>
+            </li> */}
+
+            {handleListPages()}
           </ul>
         </nav>
 
