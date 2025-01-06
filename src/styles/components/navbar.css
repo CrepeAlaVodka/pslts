@@ -90,8 +90,7 @@
   }
   & .label {
     flex: 1;
-    /* padding-left: 10px; */
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 500;
     letter-spacing: 0.4px;
     line-height: 10px;
@@ -99,9 +98,13 @@
 }
 
 .navbar-nav ul li:hover a {
-  background-color: #2d4457;
-  color: #2196f3;
+  background-color: var(--hover-bg-element);
+  color: var(--hover-color-element);
+}
 
+.navbar-nav ul li.active a {
+  background-color: var(--hover-bg-element);
+  color: var(--hover-color-element);
 }
 
 .navbar-footer {

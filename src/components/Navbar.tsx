@@ -1,13 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from 'react-router-dom';
 import pages from "@/config/pages.json";
 import { customFa6Icons } from '@/utils/Icons'; // Import customFa6Icons from Icons.tsx
 
 const Navbar = () => {
+  const location = useLocation();
+  const currentUrl = location.pathname;
+  const [active, setActive] = useState("");
 
   const handleListPages = () => {
     return pages.map((page) => {
       return (
-        <li key={page.label}>
+        <li key={page.label} className={currentUrl === page.url ? "active" : ""}>
           <a href={page.url}>
             <span className="icon">{customFa6Icons(page.icon)}</span>
             <span className="label">{page.label}</span>
